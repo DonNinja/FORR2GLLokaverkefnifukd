@@ -57,6 +57,10 @@ public class PlayerScript : MonoBehaviour {
             playerBall.velocity = Vector3.zero;
             playerBall.angularVelocity = Vector3.zero;
         }
+        if (Input.GetKey("escape"))
+        {
+            Application.Quit();
+        }
     }
 
     // Update is called once per frame
@@ -64,7 +68,7 @@ public class PlayerScript : MonoBehaviour {
         //timer += Time.deltaTime;
         if (!finished)
         {
-            if (playerSpeed <= 0.01)
+            if (playerSpeed <= 0.000001)
             {
                 if (Input.GetButtonDown("Shoot"))
                 {
